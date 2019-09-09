@@ -22,3 +22,18 @@ for index, term in enumerate(terms):
         .replace('</div>','')
 print(terms)
 print(editions)
+
+file = open("kursy_reaktor.txt", "w")
+file.write("KURS ANALITYK DANYCH\n\n")
+
+for index, term in enumerate(terms):
+    file.write(str(terms[index])+'\n')
+    file.write(str(editions[index])+'\n')
+    file.write((40*"-")+'\n')
+file.close()
+
+# hint -> input() zwaraca typ napisowy string
+user_data = input("podaj dane: ")
+print(user_data)
+
+
